@@ -21,7 +21,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* prevent any element from creating a horizontal scroll at the viewport level */
+}
 
 body {
   margin: 0;
@@ -328,7 +331,7 @@ button { font: inherit; }
   min-height: calc(100vh - var(--nav-h));
   display: grid;
   align-items: center;
-  overflow: clip;
+  overflow: hidden;
   /* Short fade — just enough to soften the paint, not delay content */
   animation: heroFadeIn 0.35s ease both;
 }
@@ -345,7 +348,7 @@ button { font: inherit; }
 .hero-bg {
   position: absolute;
   inset: -10% 0;
-  background-image: url("Man-Preparing-Barbell-Lift-Chalk-Cloud.png");
+  background-image: url("images/Man-Preparing-Barbell-Lift-Chalk-Cloud.png");
   background-size: cover;
   background-position: 64% 38%;
   background-repeat: no-repeat;
